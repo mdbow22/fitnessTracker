@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const db = require('./models');
 const workoutRoutes = require('./controllers/workouts');
 
 //set port
@@ -15,7 +14,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //connect to database
-mongoose.connect('mongodb://localhost/workout', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -23,7 +22,7 @@ mongoose.connect('mongodb://localhost/workout', {
 //API routes
 app.use('/api', workoutRoutes);
 
-//TODO: put in routes for front-end
+//Static Routes
 app.get('/stats', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/stats.html'));
 });
