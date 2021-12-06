@@ -21,4 +21,22 @@ router.get('/workouts/range', async (req, res) => {
     res.json(latest);
 });
 
+//create new empty workout
+router.post('/workouts', async (req, res) => {
+    const newWorkout = await db.Workout.create(req.body);
+
+    res.json(newWorkout);
+});
+
+//add exercise to current workout
+router.put('/workouts/:id', async (req, res) => {
+    const updatedWorkout = await db.Workout.updateOne(
+        {_id: req.params.id},
+        {$push: {exercises: req.body}}
+    );
+
+    res.json(updatedWorkout);
+});
+
+
 module.exports = router;
