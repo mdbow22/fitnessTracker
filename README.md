@@ -22,17 +22,17 @@ Which will populate your database with data for use while testing.
 
 This app can be used to track multi-exercise workouts that can incorporate resistance and cardio exercises. The landing page will show you your last workout and ask if you want to continue your workout (i.e., add more exercises to it) or start a new workout:
 
-[Insert screenshot here]
+![Screenshot of landing page](./assets/landing-page-scrnshot.png)
 
 Clicking either will take you to the page to add an exercise to your workout. Once you choose resistance or cardio as the type, options will appear to describe your exercise:
 
-[insert screenshot here]
+![Screenshot of add exercise page](./assets/add-exercise-scrnshot.png)
 
 (Note: clicking "Complete" will take you back to the landing page. Clicking "Add Exercise" will give you the option to continue adding exercises to the current workout).
 
 A dashboard is also available to provide basic stats about the duration and weight lifted for past workouts:
 
-[insert screenshot here]
+![Screenshot of Dashboard](./assets/dashboard-scrnshot.png)
 
 ## Questions
 
